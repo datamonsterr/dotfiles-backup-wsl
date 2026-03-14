@@ -1,0 +1,7 @@
+[gpg]
+	format = ssh
+[core]
+	editor = vim
+[user]
+	email = phamthanhdat17092004@gmail.com
+	name = datamonsterr

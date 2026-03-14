@@ -1,0 +1,14 @@
+/home/datpham-nuoa/.nvm/versions/node/v24.7.0/lib
+├── @github/copilot@0.0.414
+├── @google/gemini-cli@0.26.0
+├── @mermaid-js/mermaid-cli@11.9.0
+├── @openai/codex@0.104.0
+├── aws-cdk-local@3.0.1
+├── aws-cdk@2.1107.0
+├── clawdbot@2026.1.24-3
+├── corepack@0.34.0
+├── npm@11.5.1
+├── pnpm@9.15.0
+├── snyk@1.1301.0
+└── yarn@1.22.22
+
