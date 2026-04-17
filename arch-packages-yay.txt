@@ -1,0 +1,28 @@
+# Arch Linux packages for dotfiles - yay (AUR)
+# These are packages from Ubuntu that are in AUR or need AUR versions
+# Install with: yay -S $(cat arch-packages-yay.txt | grep -v '^#' | xargs)
+
+# GitHub CLI & tools
+github-cli
+copilot-cli
+
+# AWS CDK & extensions
+aws-cdk
+aws-cdk-local
+
+# Node version manager
+nvm
+
+# Additional dev tools
+marp-cli
+clawdbot
+
+# Optional: Gemini CLI
+google-gemini-cli
+
+# Additional formatters/linters
+prettier
+eslint-cli
+
+# Mermaid CLI
+mermaid-cli

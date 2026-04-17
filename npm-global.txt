@@ -1,0 +1,16 @@
+# NPM Global Packages
+# Install with: npm install -g $(cat npm-global.txt | grep -v '^#' | xargs)
+
+@github/copilot@latest
+@google/gemini-cli@latest
+@mermaid-js/mermaid-cli@latest
+@openai/codex@latest
+aws-cdk@latest
+aws-cdk-local@latest
+clawdbot@latest
+corepack@latest
+npm@latest
+prettier@latest
+eslint@latest
+typescript@latest
+ts-node@latest

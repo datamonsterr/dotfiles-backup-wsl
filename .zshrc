@@ -1,9 +1,14 @@
 # End of lines added by compinstall
 
+# Arch Linux optimized configuration
 # If you come from bash you might have to change your $PATH.
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
-export PATH=$PATH:$HOME/bin:/usr/local/bin:$GOBIN:$HOME/.local/bin
+
+# Add cargo to path
+export CARGO_HOME=$HOME/.cargo
+
+export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$GOBIN:${CARGO_HOME}/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -122,5 +127,46 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-eval "$($(/home/linuxbrew/.linuxbrew/bin/brew --prefix)/bin/brew shellenv)"
-export GEMINI_API_KEY="AIzaSyDY49Y2j94acAe0J0mZK0n5XSHCsGFTr-o"
+# Linuxbrew support (if installed)
+if [ -x "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
+  eval "$($(/home/linuxbrew/.linuxbrew/bin/brew --prefix)/bin/brew shellenv)"
+fi
+
+# Arch-specific: pacman alias
+alias pacman-update="sudo pacman -Syu"
+alias pacman-search="pacman -Ss"
+alias pacman-info="pacman -Si"
+
+# Language servers and tools
+alias lsp-python="pylsp"
+alias lsp-bash="bash-language-server"
+
+# Convenient functions
+mkcd() { mkdir -p "$1" && cd "$1"; }
+extract() {
+  if [ -f "$1" ]; then
+    case "$1" in
+      *.tar.bz2) tar xjf "$1" ;;
+      *.tar.gz) tar xzf "$1" ;;
+      *.bz2) bunzip2 "$1" ;;
+      *.rar) unrar x "$1" ;;
+      *.gz) gunzip "$1" ;;
+      *.tar) tar xf "$1" ;;
+      *.tbz2) tar xjf "$1" ;;
+      *.tgz) tar xzf "$1" ;;
+      *.zip) unzip "$1" ;;
+      *.Z) uncompress "$1" ;;
+      *.7z) 7z x "$1" ;;
+      *) echo "'$1' cannot be extracted via extract()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+# Load .bashrc if it exists (for bash compatibility)
+if [ -f "$HOME/.bashrc" ]; then
+  . "$HOME/.bashrc"
+fi
+
+. "$HOME/.local/bin/env"

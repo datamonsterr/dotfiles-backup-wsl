@@ -5,3 +5,11 @@
 [user]
 	email = phamthanhdat17092004@gmail.com
 	name = datamonsterr
+[includeIf "gitdir:~/dev/nuoa-swe/"]
+	path = ~/.gitconfig-nuoa
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

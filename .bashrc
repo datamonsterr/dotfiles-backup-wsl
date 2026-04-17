@@ -115,4 +115,30 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Arch Linux optimizations
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export CARGO_HOME=$HOME/.cargo
+export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$GOBIN:${CARGO_HOME}/bin:$PATH
+
+# Linuxbrew support (if installed)
+if [ -x "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
+  eval "$($(/home/linuxbrew/.linuxbrew/bin/brew --prefix)/bin/brew shellenv)"
+fi
+
+# NVM configuration
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# Aliases for Arch
+alias pacman-update="sudo pacman -Syu"
+alias pacman-search="pacman -Ss"
+alias pacman-info="pacman -Si"
+alias yay-update="yay -Syu"
+
+. "$HOME/.local/bin/env"
+alias wsl-open="~/.local/bin/wsl-open-py"
+
+export MINIMAX_API_KEY="sk-cp-lYr-PCFGmsaG0uEIAarK9WoPhSRlS9wgZCZ8V9_dxb0FZUoQjeHggnJrYI5nd71QPex6milvy2TGc9bC0f6m8U2EP8RBcALXlJrg6E2XfQXVpPQrOmSGIIw"

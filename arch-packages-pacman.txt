@@ -1,0 +1,132 @@
+# Arch Linux packages for dotfiles - pacman (official repos)
+# These are the essential packages from the Ubuntu backup
+# Install with: pacman -S $(cat arch-packages-pacman.txt | grep -v '^#' | xargs)
+
+# Base system
+base
+linux-headers
+base-devel
+
+# Shells & terminals
+bash
+zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
+tmux
+
+# Editors
+vim
+nano
+neovim
+
+# Version control
+git
+git-lfs
+
+# Networking & SSH
+openssh
+curl
+wget
+openssl
+bind-tools
+net-tools
+netcat
+openssh
+
+# System utilities
+coreutils
+findutils
+grep
+sed
+awk
+which
+util-linux
+procps-ng
+htop
+iotop
+tree
+jq
+ripgrep
+fd
+exa
+bat
+
+# Development tools
+build-essential
+make
+cmake
+gcc
+llvm
+clang
+gdb
+lldb
+gdbgui
+
+# Build tools & compilers
+gcc-libs
+glibc
+linux-api-headers
+
+# Python & interpreters
+python
+python-pip
+python-virtualenv
+ruby
+perl
+nodejs
+npm
+
+# Language servers & linters
+bash-language-server
+python-lsp-server
+typescript-language-server
+pyright
+
+# Container tools
+docker
+docker-compose
+
+# AWS & Cloud tools
+aws-cli
+
+# File utilities
+bzip2
+gzip
+xz
+unzip
+zip
+tar
+rsync
+
+# Documentation
+man-db
+man-pages
+
+# Fonts
+adobe-source-code-pro-fonts
+
+# System administration
+sudo
+doas
+which
+watch
+time
+
+# Debugging & tracing
+strace
+ltrace
+valgrind
+
+# Package management
+pacman-contrib
+yay
+
+# Database clients (optional, for tools)
+sqlite
+
+# SSL/TLS
+ca-certificates
+ca-certificates-utils
+
+# Locale & internationalization
+glibc-locales
