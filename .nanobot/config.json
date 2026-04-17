@@ -41,8 +41,8 @@
       "allowFrom": [],
       "intents": 37377,
       "groupPolicy": "mention",
-      "readReceiptEmoji": "👀",
-      "workingEmoji": "🔧",
+      "readReceiptEmoji": "\ud83d\udc40",
+      "workingEmoji": "\ud83d\udd27",
       "workingEmojiDelay": 2.0,
       "streaming": true,
       "proxy": null,
@@ -86,7 +86,7 @@
       "allowFrom": [],
       "reactEmoji": "THUMBSUP",
       "doneEmoji": null,
-      "toolHintPrefix": "🔧",
+      "toolHintPrefix": "\ud83d\udd27",
       "groupPolicy": "mention",
       "replyToMessage": false,
       "streaming": true,
@@ -124,7 +124,7 @@
       "secret": "",
       "allowFrom": [],
       "msgFormat": "plain",
-      "ackMessage": "⏳ Processing...",
+      "ackMessage": "\u23f3 Processing...",
       "mediaDir": "",
       "downloadChunkSize": 262144,
       "downloadMaxBytes": 209715200
@@ -151,10 +151,12 @@
     "telegram": {
       "enabled": true,
       "token": "8678695786:AAFsfMMSyRV6r_QcAwoqzfj1imiDXci_aPI",
-      "allowFrom": ["datamonsterr"],
+      "allowFrom": [
+        "datamonsterr"
+      ],
       "proxy": null,
       "replyToMessage": false,
-      "reactEmoji": "👀",
+      "reactEmoji": "\ud83d\udc40",
       "groupPolicy": "mention",
       "connectionPoolSize": 32,
       "poolTimeout": 5.0,
@@ -370,7 +372,22 @@
     "mcpServers": {
       "markitdown": {
         "command": "/home/dat/.local/share/markitdown-mcp-venv/bin/python",
-        "args": ["-m", "markitdown_mcp"]
+        "args": [
+          "-m",
+          "markitdown_mcp"
+        ]
+      },
+      "google": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "google-tools-mcp"
+        ],
+        "env": {
+          "GOOGLE_MCP_PROFILE": "default",
+          "GOOGLE_OAUTH_CREDENTIALS": "/home/dat/.config/google-tools-mcp/credentials.json",
+          "GOOGLE_OAUTH_TOKEN": "/home/dat/.config/google-tools-mcp/default/token.json"
+        }
       }
     },
     "ssrfWhitelist": []
