@@ -21,6 +21,7 @@
 - Values practical execution over long explanations
 - Wants research and knowledge work to be organized into a clean wiki/vault structure
 - Wants strong support for NotebookLM-based knowledge querying
+- Wants view/list NotebookLM notebooks direct from Google NotebookLM account, not local saved library
 - Wants model usage to be cost-aware and task-appropriate
 
 ## Assistant guidance

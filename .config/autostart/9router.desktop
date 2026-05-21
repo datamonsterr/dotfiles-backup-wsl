@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=9Router
+Comment=9Router API Proxy
+Exec=/usr/bin/node /usr/lib/node_modules/9router/cli.js --tray --skip-update
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
